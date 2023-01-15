@@ -1,0 +1,46 @@
+.feedback {
+    padding-bottom: 58px;
+
+    &__wrapper {
+        margin-top: 66px;
+    }
+
+    &-client__block {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 110px;
+
+        img {
+            width: 169px;
+            height: 169px;
+        }
+    }
+
+    &-client__wrapper {
+        margin-left: 60px;
+        padding-right: 15px;
+    }
+
+    &-client__block:first-child {
+        margin-top: 0;
+    }
+
+    &-client__name {
+        font-weight: 700;
+        font-size: 18px;
+        color: $black-color;
+    }
+
+    &-client__halfmarathon {
+        font-weight: 500;
+        font-size: 14px;
+        color: #646464;
+    }
+
+    &-client__descr {
+        margin-top: 20px;
+        font-weight: 300;
+        font-size: 16px;
+        color: $black-color;
+    }
+}
