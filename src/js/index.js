@@ -29,31 +29,7 @@ $(document).ready(function () {
   next.addEventListener("click", () => {
     slider.goTo("next");
   });
-
-  function validateForm(form) {
-    $(form).validate({
-      rules: {
-        name: "required",
-        phone: "required",
-
-        email: {
-          required: true,
-          email: true,
-        },
-      },
-
-      messages: {
-        name: "Пожалуйста, введите ваше имя",
-        phone: "Пожалуйста, введите свой номер телефона",
-
-        email: {
-          required: "Пожалуйста, введите вашу почту",
-          email: "Неправильно введен адрес почты",
-        },
-      },
-    });
-  }
-
+ 
   function toggleSlide(item) {
     $(item).each(function (i) {
       $(this).on("click", function (e) {
@@ -136,19 +112,8 @@ $(document).ready(function () {
     });
   });
 
-  validateForm("#consultation-form");
-  validateForm("#consultation form");
-  validateForm("#order form");
 
   $("input[name=phone]").mask("+7 (999) 999-99-99");
-
-  // $("input[name=name]").on("blur", function () {
-  //     if ($(this).val().match("^[a-zA-Z]{3,16}$")) {
-  //         alert("Valid name");
-  //     } else {
-  //         alert("That's not a name");
-  //     }
-  // });
 
   $("form").submit(function (e) {
     e.preventDefault();

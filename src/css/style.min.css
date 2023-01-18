@@ -456,7 +456,7 @@ progress {
 @font-face {
   font-family: 'Museo Sans Cyrl';
   font-display: swap;
-  src: local("MuseoSansCyrl-500"), url("../../fonts/MuseoSansCyrl-500.woff") format("woff");
+  src: local("MuseoSansCyrl-500"), url("../fonts/MuseoSansCyrl-500.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -464,7 +464,7 @@ progress {
 @font-face {
   font-family: 'Museo Sans Cyrl';
   font-display: swap;
-  src: local("MuseoSansCyrl-300"), url("../../fonts/MuseoSansCyrl-300.woff") format("woff");
+  src: local("MuseoSansCyrl-300"), url("../fonts/MuseoSansCyrl-300.woff") format("woff");
   font-weight: 300;
   font-style: normal;
 }
@@ -472,7 +472,7 @@ progress {
 @font-face {
   font-family: 'Museo Sans Cyrl';
   font-display: swap;
-  src: local("MuseoSansCyrl-700"), url("../../fonts/MuseoSansCyrl-700.woff") format("woff");
+  src: local("MuseoSansCyrl-700"), url("../fonts/MuseoSansCyrl-700.woff") format("woff");
   font-weight: 700;
   font-style: normal;
 }
@@ -4614,7 +4614,7 @@ progress {
 }
 
 .promo {
-  min-height: 650px;
+  min-height: 100vh;
   padding: 21px 0 93px 0;
   background: url("../img/bg/main_bg.jpg") center center/cover no-repeat;
 }
@@ -4799,18 +4799,6 @@ progress {
   color: #FFFFFF;
 }
 
-.consultation .error {
-  text-align: center;
-  border: 1px solid #C70101;
-}
-
-.consultation label.error {
-  border: none;
-  color: #FFFFFF;
-  text-align: center;
-  margin-bottom: 15px;
-}
-
 .feed-form {
   margin-top: 36px;
   display: -webkit-box;
@@ -4833,6 +4821,7 @@ progress {
   font-weight: 300;
   font-size: 14px;
   color: #4B4B4B;
+  text-align: left;
 }
 
 .feed-form input:nth-child(3) {
@@ -5115,15 +5104,16 @@ progress {
 }
 
 .catalog-item__back {
+  display: block;
   position: absolute;
   bottom: 0;
-  left: 50%;
-  -webkit-transform: translateX(calc(-50% - 19px));
-          transform: translateX(calc(-50% - 19px));
-  display: block;
+  left: 0;
+  right: 0;
+  text-align: center;
   color: #C70101;
   font-weight: 500;
   text-transform: uppercase;
+  font-size: 14px;
 }
 
 .catalog-item__back:hover {
@@ -5243,7 +5233,10 @@ progress {
 }
 
 .footer iframe {
-  width: 100%;
+  position: relative;
+  display: block;
+  width: 75%;
+  margin: 0 auto;
   height: 630px;
 }
 
@@ -5258,7 +5251,7 @@ progress {
 
 .modal {
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -5386,9 +5379,6 @@ body {
   .catalog-item {
     margin: 0 10px 20px;
   }
-  .catalog__tab {
-    width: 193px;
-  }
   .feedback-client__block {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -5402,6 +5392,7 @@ body {
   .footer__info {
     width: 40%;
     height: 40%;
+    left: 32.5%;
   }
   .footer__addr {
     font-size: 17px;
@@ -5473,11 +5464,10 @@ body {
     width: 50%;
   }
   .catalog__tab {
-    width: 162px;
     font-size: 16px;
   }
   .catalog-item {
-    width: 268px;
+    width: 310px;
   }
   .catalog .button_mini {
     width: 130px;
@@ -5518,6 +5508,9 @@ body {
 }
 
 @media (max-width: 576px) {
+  .container {
+    max-width: 85%;
+  }
   .header .button {
     height: 40px;
   }
@@ -5540,27 +5533,19 @@ body {
     font-size: 16px;
   }
   .catalog__tabs {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
   }
   .catalog__tab {
-    width: 140px;
-    font-size: 13px;
+    font-size: 10px;
     margin-top: 20px;
-    -webkit-transform: none;
-            transform: none;
-  }
-  .catalog__tab div {
-    -webkit-transform: none;
-            transform: none;
   }
   .catalog__tab:first-child {
     margin-top: 0;
   }
-  .catalog-item {
-    width: 269px;
+  .catalog .title {
+    font-size: 22px;
   }
   .advantage__items {
     display: -webkit-box;
@@ -5575,10 +5560,9 @@ body {
             align-items: center;
   }
   .footer__info {
-    width: 50%;
-    left: 133px;
-    -webkit-transform: translateX(-133px);
-            transform: translateX(-133px);
+    width: 55%;
+    left: 39.7%;
+    top: 9%;
   }
   .modal {
     width: 70%;
@@ -5595,7 +5579,7 @@ body {
   }
 }
 
-@media (max-width: 367px) {
+@media (max-width: 375px) {
   .promo__icons {
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -5623,11 +5607,14 @@ body {
     font-size: 15px;
   }
   .footer__info {
-    width: 55%;
+    left: 39.8%;
   }
   .feedback-client__descr {
     padding: 0 10px;
     text-align: center;
+  }
+  .catalog__tab {
+    font-size: 9px;
   }
 }
 /*# sourceMappingURL=style.min.css.map */

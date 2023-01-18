@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang = "ru">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
@@ -122,9 +122,11 @@
             </div>
 
             <form id="consultation-form" class="feed-form" action="#">
-                <input name="name" placeholder="Ваше имя" type="text">
-                <input name="phone" placeholder="Ваш телефон">
-                <input name="email" placeholder="Ваш E-mail" type="email">
+                <input name="name" required placeholder="Ваше имя" type="text">
+                <input name="phone" pattern="^\d({3})-\d{3}-\d{4}$" required placeholder="Ваш телефон">
+                <input name="email" 
+                pattern="[^@\s]+@[^@\s]+\.[^@\s]+" 
+                required placeholder="Ваш E-mail" type="email">
 
                 <button class="button button_submit">заказать консультацию</button>
             </form>
@@ -518,9 +520,10 @@
             <div class="modal__descr">и мы перезвоним вам в течении 10 минут</div>
 
             <form class="feed-form feed-form_mt25 feed-form__adoption" action="#">
-                <input name="name" placeholder="Ваше имя" type="text">
-                <input name="phone" placeholder="Ваш телефон">
-                <input name="email" placeholder="Ваш E-mail" type="email">
+                <input name="name" required placeholder="Ваше имя" type="text">
+                <input name="phone" pattern="^\d({3})-\d{3}-\d{4}$" required placeholder="Ваш телефон">
+                <input name="email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" 
+                required placeholder="Ваш E-mail" type="email">
 
                 <button class="button button_submit">заказать консультацию</button>
             </form>
@@ -532,10 +535,10 @@
             <div class="modal__descr">Пульсометр Polar FT1</div>
 
             <form class="feed-form feed-form_mt25 feed-form__adoption" action="#">
-                <input name="name" placeholder="Ваше имя" type="text">
-                <input name="phone" placeholder="Ваш телефон">
-                <input name="email" placeholder="Ваш E-mail" type="email">
-
+                <input name="name"  required placeholder="Ваше имя" type="text">
+                <input name="phone" pattern="^\d({3})-\d{3}-\d{4}$" required placeholder="Ваш телефон">
+                <input name="email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" required 
+                placeholder="Ваш E-mail" type="email">
                 <button class="button button_submit">Купить</button>
             </form>
         </div>
@@ -552,7 +555,7 @@
     </a>
 
     <script src="js/jquery.min.js"></script>
-    <script src="js/jqeury.min.tiny-slider.js"></script>
+    <script src="js/jquery.min.tiny-slider.js"></script>
     <script src="js/jquery.validate.min.js"></script>
     <script src="js/jquery.maskedinput.min.js"></script>
     <script src="js/wow.min.js"></script>
